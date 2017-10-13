@@ -1,0 +1,56 @@
+0. mod_security
+---------------
+Edit /etc/modsecurity/modsecurity.conf
+
+
+1. Reject input
+------------
+### blacklist
+if (preg_match('/<script>/', $_GET['p'])) {
+  echo 'baj';
+} else {
+  echo $_GET['p'];
+}
+payload: <Script>alert...
+payload: <img%20src=x%20onerror="alert(1)"/>
+
+### whitelist
+if (!preg_match('/^[a-z]*$/', $_GET['p'])) {
+  echo 'baj';
+} else {
+  echo $_GET['p'];
+}
+rock solid!
+
+2. Sanitizing input
+----------------
+### blacklist
+echo preg_replace('/<script>/', '', $_GET['p']);
+
+payload: <scr<script>ipt>alert(1)...
+
+### whitelist
+Check out HTMLPurifier!
+
+3. Render w/ correct encoding
+--------------------------
+echo htmlentities($_GET['p'], ENT_QUOTES | ENT_HTML5 | ENT_SUBSTITUTE);
+emphasize correct encoding!
+
+4. X-XSS-Protection header
+--------------------------
+0, 1, mode=block
+http://defense.in.depth:8080/rxss.php?p=hello&o=%3Cscript%20src=%22//real.defense.in.depth:8080/security-lib.js%22%3E%3C/script%3E
+only reflected!!
+
+Facebook uses 0. It makes sense!
+
+5. CSP
+------
+header('Content-Security-Policy: default-src \'self\' ui.static.emarsys.net; style-src \'unsafe-inline\' redirector.eservice.emarsys.net ui.static.emarsys.net; script-src redirector.eservice.emarsys.net ui.static.emarsys.net');
+
+curl -I https://github.com | grep Content-Security
+
+6. separate domains
+-------------------
+load up pxss-sop.php
