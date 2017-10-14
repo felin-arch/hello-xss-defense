@@ -1,7 +1,7 @@
 <?php
 header('X-XSS-Protection: 0');
-require('header.php');
 require('message_handler.php');
+require('../header.php');
 ?>
 <div class="e-header">
   <h1>
@@ -9,11 +9,11 @@ require('message_handler.php');
   </h1>
 </div>
 <p>
-  <form method="post" action="/pxss.php">
+  <form method="post" action="/persistent/">
     <textarea style="font-size: 48px" name="message" rows="4" cols="40">[xss]</textarea><br/>
     <input type="submit" value="Store" class="e-btn" />
-    <a href="/pxss.php?clear=true" class="e-btn">Clear</a>
-    <a href="/pxss.php?create_some=true" class="e-btn">Create some</a>
+    <a href="/persistent/?clear=true" class="e-btn">Clear</a>
+    <a href="/persistent/?create_some=true" class="e-btn">Create some</a>
   </form>
 </p>
 
@@ -25,4 +25,4 @@ require('message_handler.php');
     }
   ?>
 </div>
-<?php require('footer.php'); ?>
+<?php require('../footer.php'); ?>

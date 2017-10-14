@@ -9,23 +9,80 @@ setcookie('secret', 'hide_this');
   <body>
     <div class="e-topnav">
       <div class="e-topnav__container">
-        <div class="e-topnav__logo e-topnav__logo-b2c">
-          <svg>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#e-logo"></use>
-          </svg>
-        </div>
         <input id="e-topnav__mobilemenu" type="checkbox" class="e-topnav__mobilemenu">
         <nav class="e-menu">
           <ul class="e-menu__list">
             <li class="e-menu__item">
-              <a href="/rxss.php?p=[xss]" class="e-menu__name">
-                Reflected XSS
+              <a href="http://localhost:8080/" class="e-menu__name">
+                0 - Start
               </a>
             </li>
             <li class="e-menu__item">
-              <a href="/pxss.php" class="e-menu__name">
-                Persistent XSS
-              </a>
+              <span class="e-menu__name">
+                1 - Starting up
+              </span>
+              <div class="e-menu__drop">
+                <ul class="e-menu__list e-menu__list-child">
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/reflected/?p=[injection]" class="e-menu__name e-menu__name-child">
+                      1/A - Reflected XSS
+                    </a>
+                  </li>
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/persistent/" class="e-menu__name e-menu__name-child">
+                      1/B - Persistent XSS
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="e-menu__item">
+              <span class="e-menu__name">
+                2 - Web Application Firewall
+              </span>
+              <div class="e-menu__drop">
+                <ul class="e-menu__list e-menu__list-child">
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="http://localhost:8080/" class="e-menu__name e-menu__name-child">
+                      2/A - ModSecurity Off
+                    </a>
+                  </li>
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="http://localhost:8081/" class="e-menu__name e-menu__name-child">
+                      2/B - ModSecurity On
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="e-menu__item">
+              <span class="e-menu__name">
+                3 - Input Handling
+              </span>
+              <div class="e-menu__drop">
+                <ul class="e-menu__list e-menu__list-child">
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/reflected/?p=[injection]&mode=blacklist" class="e-menu__name e-menu__name-child">
+                      3/A - Blacklisting
+                    </a>
+                  </li>
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/reflected/?p=[injection]&mode=whitelist" class="e-menu__name e-menu__name-child">
+                      3/B - Whitelisting
+                    </a>
+                  </li>
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/reflected/?p=[injection]&mode=regexp" class="e-menu__name e-menu__name-child">
+                      3/C - Regexp filtering
+                    </a>
+                  </li>
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/reflected/?p=[injection]&mode=context" class="e-menu__name e-menu__name-child">
+                      3/D - Context sensitive filtering
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="e-menu__item">
               <a href="/pxss-sop.php" class="e-menu__name">

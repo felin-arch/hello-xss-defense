@@ -14,8 +14,6 @@ RUN apt-get update && \
 
 RUN docker-php-ext-install pdo pdo_mysql intl
 
-COPY etc/apache/000-default.conf /etc/apache2/sites-available/
-
 WORKDIR /var/www
 
 RUN a2enmod security2
@@ -28,3 +26,9 @@ RUN echo '\n<IfModule security2_module>\n\
      Include /etc/modsecurity/owasp-modsecurity-crs/crs-setup.conf\n\
      Include /etc/modsecurity/owasp-modsecurity-crs/rules/*.conf\n\
 </IfModule>' >> /etc/apache2/apache2.conf
+
+COPY etc/apache/000-default.conf /etc/apache2/sites-available/
+COPY etc/apache/001-default-waf.conf /etc/apache2/sites-available/
+
+RUN ln -s /etc/apache2/sites-available/001-default-waf.conf /etc/apache2/sites-enabled/001-default-waf.conf
+RUN echo 'Listen 81' >> /etc/apache2/ports.conf

@@ -17,6 +17,6 @@ require('message_handler.php');
   </form>
 </p>
 
-<iframe src="//real.defense.in.depth:8080/pxss-list.php" frameborder="0" height="100%" width="100%"></iframe>
+<iframe src="//127.0.0.1:8081/pxss-list.php" frameborder="0" height="100%" width="100%"></iframe>
 <?php require('footer.php'); ?>
 

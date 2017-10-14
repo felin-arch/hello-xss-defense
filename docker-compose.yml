@@ -24,6 +24,7 @@ services:
       - db
     ports:
       - "8080:80"
+      - "8081:81"
     restart: always
     environment:
       MYSQL_DSN: mysql:host=db;dbname=dev

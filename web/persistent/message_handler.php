@@ -4,12 +4,16 @@ $db = new PDO(getenv('MYSQL_DSN'), getenv('MYSQL_USER'), getenv('MYSQL_PASSWORD'
 
 if ($_GET['clear'] === 'true') {
   $db->query('delete from messages');
+  header('Location: /persistent/');
+  exit(0);
 }
 
 $message = $_POST['message'];
 if (isset($message)) {
   $q = $db->prepare('insert into messages (message) values (:message)');
   $q->execute(array(':message' => $message));
+  header('Location: /persistent/');
+  exit(0);
 }
 
 if ($_GET['create_some'] == 'true') {
@@ -22,6 +26,8 @@ if ($_GET['create_some'] == 'true') {
   foreach ($messages as $message) {
     $q->execute(array(':message' => $message));
   }
+  header('Location: /persistent/');
+  exit(0);
 }
 
 $messages = function() use ($db) {
