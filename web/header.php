@@ -85,6 +85,30 @@ setcookie('secret', 'hide_this');
               </div>
             </li>
             <li class="e-menu__item">
+              <a href="/reflected/?p=[injection]&encoding=true" class="e-menu__name">
+                4 - Output encoding
+              </a>
+            </li>
+            <li class="e-menu__item">
+              <span class="e-menu__name">
+                5 - XSS Auditor
+              </span>
+              <div class="e-menu__drop">
+                <ul class="e-menu__list e-menu__list-child">
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/reflected/?p=[injection]&auditor=sanitize" class="e-menu__name e-menu__name-child">
+                      5/A - Auditor Sanitizing
+                    </a>
+                  </li>
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/reflected/?p=[injection]&auditor=block" class="e-menu__name e-menu__name-child">
+                      5/B - Auditor blocking
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="e-menu__item">
               <a href="/pxss-sop.php" class="e-menu__name">
                 Persistent XSS w/ SOP
               </a>
