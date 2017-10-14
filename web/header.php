@@ -1,5 +1,5 @@
 <?php
-setcookie('secret', 'hide_this');
+setcookie('secret', 'hide_this', 0, '', '', false, false);
 ?>
 <!DOCTYPE html>
 <html>
@@ -105,13 +105,51 @@ setcookie('secret', 'hide_this');
                       5/B - Auditor blocking
                     </a>
                   </li>
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/persistent/?auditor=block" class="e-menu__name e-menu__name-child">
+                      5/C - Auditor blocking - Persistent
+                    </a>
+                  </li>
                 </ul>
               </div>
             </li>
             <li class="e-menu__item">
-              <a href="/pxss-sop.php" class="e-menu__name">
-                Persistent XSS w/ SOP
-              </a>
+              <span class="e-menu__name">
+                6 - Content Security Policy
+              </span>
+              <div class="e-menu__drop">
+                <ul class="e-menu__list e-menu__list-child">
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/reflected/?p=[injection]&csp=on" class="e-menu__name e-menu__name-child">
+                      6/A - Reflected w/ CSP
+                    </a>
+                  </li>
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/persistent/?csp=on" class="e-menu__name e-menu__name-child">
+                      6/B - Persistent w/ CSP
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="e-menu__item">
+              <span class="e-menu__name">
+                7 - Same Origin Policy
+              </span>
+              <div class="e-menu__drop">
+                <ul class="e-menu__list e-menu__list-child">
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/persistent/" class="e-menu__name e-menu__name-child">
+                      7/A - Same domains
+                    </a>
+                  </li>
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/persistent/sop/" class="e-menu__name e-menu__name-child">
+                      7/B - Different domains
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </nav>

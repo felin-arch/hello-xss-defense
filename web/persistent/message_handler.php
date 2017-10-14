@@ -8,12 +8,10 @@ if ($_GET['clear'] === 'true') {
   exit(0);
 }
 
-$message = $_POST['message'];
+$message = $_POST['p'];
 if (isset($message)) {
   $q = $db->prepare('insert into messages (message) values (:message)');
   $q->execute(array(':message' => $message));
-  header('Location: /persistent/');
-  exit(0);
 }
 
 if ($_GET['create_some'] == 'true') {

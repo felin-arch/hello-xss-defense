@@ -3,6 +3,7 @@ require('../vendor/HTMLPurifier.standalone.php');
 require('../include/filters.php');
 require('../include/encoders.php');
 require('../include/auditor.php');
+require('../include/csp.php');
 require('../header.php');
 ?>
 <div class="e-header">

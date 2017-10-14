@@ -1,8 +1,8 @@
 <?php
-require('../include/auditor.php');
-require('../include/csp.php');
-require('message_handler.php');
-require('../header.php');
+require('../../include/auditor.php');
+require('../../include/csp.php');
+require('../message_handler.php');
+require('../../header.php');
 ?>
 <div class="e-header">
   <h1>
@@ -17,13 +17,6 @@ require('../header.php');
     <a href="/persistent/?create_some=true" class="e-btn">Create some</a>
   </form>
 </p>
+<iframe src="//127.0.0.1:8080/persistent/sop/list.php" frameborder="0" height="100%" width="100%"></iframe>
+<?php require('../../footer.php'); ?>
 
-<div>
-  <?php
-    foreach ($messages() as $row) {
-      $message = $row['message'];
-      echo "<div style=\"font-size: 36px\" class=\"e-box\">{$message}</div>";
-    }
-  ?>
-</div>
-<?php require('../footer.php'); ?>
