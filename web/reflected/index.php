@@ -1,5 +1,6 @@
 <?php
 header('X-XSS-Protection: 0');
+require('../vendor/HTMLPurifier.standalone.php');
 require('../header.php');
 ?>
 <div class="e-header">
@@ -52,7 +53,8 @@ function regexpFilter($p) {
 }
 
 function contextSensitiveFilter($p) {
-  return $p;
+  $purifier = new HTMLPurifier(HTMLPurifier_Config::createDefault());
+  return $purifier->purify($p);
 }
 
 function title() {
