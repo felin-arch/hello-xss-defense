@@ -5,6 +5,7 @@ setcookie('secret', 'hide_this', 0, '', '', false, false);
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="https://redirector.eservice.emarsys.net/ui/latest/css/app.css">
+    <link rel="stylesheet" type="text/css" href="/css/site.css">
   </head>
   <body>
     <div class="e-topnav">
@@ -63,22 +64,22 @@ setcookie('secret', 'hide_this', 0, '', '', false, false);
                 <ul class="e-menu__list e-menu__list-child">
                   <li class="e-menu__item e-menu__item-child">
                     <a href="/reflected/?p=[injection]&mode=blacklist" class="e-menu__name e-menu__name-child">
-                      3/A - Blacklisting
+                      3/A - Blacklisting filtering
                     </a>
                   </li>
                   <li class="e-menu__item e-menu__item-child">
                     <a href="/reflected/?p=[injection]&mode=whitelist" class="e-menu__name e-menu__name-child">
-                      3/B - Whitelisting
+                      3/B - Whitelisting filtering
                     </a>
                   </li>
                   <li class="e-menu__item e-menu__item-child">
                     <a href="/reflected/?p=[injection]&mode=regexp" class="e-menu__name e-menu__name-child">
-                      3/C - Regexp filtering
+                      3/C - Regexp sanitization
                     </a>
                   </li>
                   <li class="e-menu__item e-menu__item-child">
                     <a href="/reflected/?p=[injection]&mode=context" class="e-menu__name e-menu__name-child">
-                      3/D - Context sensitive filtering
+                      3/D - Context sensitive sanitization
                     </a>
                   </li>
                 </ul>

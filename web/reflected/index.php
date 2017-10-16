@@ -12,13 +12,13 @@ require('../header.php');
   </h1>
 </div>
 
-<p style="font-size: 48px">
+<p class="large-font">
 <?php
   echo encodeP(getP());
 ?>
 </p>
 
-<script src="../js/security-lib.js"></script>
+<script src="http://127.0.0.1:8080/js/security-lib.js"></script>
 <?php
 require('../footer.php');
 

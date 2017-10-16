@@ -1,0 +1,41 @@
+.large-font {
+  font-size: 48px;
+}
+
+.start_text {
+  font-size: 22px;
+}
+
+.start_header {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.iframe {
+  margin: 0px;
+}
+
+.modsecurity_error {
+  width: 400px;
+  margin: auto;
+}
+
+.start_objective {
+
+}
+
+.start_hint {
+  color: #fbfbfb;
+}
+
+.start_reading {
+
+}
+
+.start_section {
+  font-size: 24px;
+}
+
+hr {
+  margin-top: 60px;
+}

@@ -1,1 +1,1 @@
-document.write('<p style="font-size: 48px">Security library loaded!</p>');
+document.write('<p class="large-font">Security library loaded!</p>');
