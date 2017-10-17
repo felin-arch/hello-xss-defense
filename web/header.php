@@ -6,6 +6,7 @@ setcookie('secret', 'hide_this', 0, '', '', false, false);
   <head>
     <link rel="stylesheet" type="text/css" href="https://redirector.eservice.emarsys.net/ui/latest/css/app.css">
     <link rel="stylesheet" type="text/css" href="/css/site.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   </head>
   <body>
     <div class="e-topnav">
