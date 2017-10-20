@@ -17,6 +17,6 @@ require('../../header.php');
     <a href="/persistent/?create_some=true" class="e-btn">Create some</a>
   </form>
 </p>
-<iframe src="//127.0.0.1:8080/persistent/sop/list.php" frameborder="0" height="100%" width="100%"></iframe>
+<iframe src="//xss1.lappfold.com:8080/persistent/sop/list.php" frameborder="0" height="100%" width="100%"></iframe>
 <?php require('../../footer.php'); ?>
 

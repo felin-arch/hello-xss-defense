@@ -18,7 +18,7 @@ require('../header.php');
 ?>
 </p>
 
-<script src="http://127.0.0.1:8080/js/security-lib.js"></script>
+<script src="http://xss1.lappfold.com:8080/js/security-lib.js"></script>
 <?php
 require('../footer.php');
 

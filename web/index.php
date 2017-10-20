@@ -165,7 +165,7 @@
       Hint:
       <ul>
         <li>
-          <span class="start_hint">&lt;script src="http://127.0.0.1:8080/js/security-lib.js"&gt;&lt;/script&gt;</span>
+          <span class="start_hint">&lt;script src="http://xss.lappfold.com:8080/js/security-lib.js"&gt;&lt;/script&gt;</span>
         </li>
         <li>
           <span class="start_hint">This does not protect against persistent attacks!</span>

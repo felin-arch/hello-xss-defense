@@ -15,7 +15,7 @@ setcookie('secret', 'hide_this', 0, '', '', false, false);
         <nav class="e-menu">
           <ul class="e-menu__list">
             <li class="e-menu__item">
-              <a href="http://localhost:8080/" class="e-menu__name">
+              <a href="http://xss.lappfold.com:8080/" class="e-menu__name">
                 0 - Start
               </a>
             </li>
@@ -45,12 +45,12 @@ setcookie('secret', 'hide_this', 0, '', '', false, false);
               <div class="e-menu__drop">
                 <ul class="e-menu__list e-menu__list-child">
                   <li class="e-menu__item e-menu__item-child">
-                    <a href="http://localhost:8080/" class="e-menu__name e-menu__name-child">
+                    <a href="http://xss.lappfold.com:8080/" class="e-menu__name e-menu__name-child">
                       2/A - ModSecurity Off
                     </a>
                   </li>
                   <li class="e-menu__item e-menu__item-child">
-                    <a href="http://localhost:8081/" class="e-menu__name e-menu__name-child">
+                    <a href="http://xss.lappfold.com:8081/" class="e-menu__name e-menu__name-child">
                       2/B - ModSecurity On
                     </a>
                   </li>
