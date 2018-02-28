@@ -153,6 +153,25 @@ setcookie('secret', 'hide_this', 0, '', '', false, false);
                 </ul>
               </div>
             </li>
+            <li class="e-menu__item">
+              <span class="e-menu__name">
+                8 - Subresource Integrity
+              </span>
+              <div class="e-menu__drop">
+                <ul class="e-menu__list e-menu__list-child">
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/sri/" class="e-menu__name e-menu__name-child">
+                      8/A - SRI Off
+                    </a>
+                  </li>
+                  <li class="e-menu__item e-menu__item-child">
+                    <a href="/sri/?sri=on" class="e-menu__name e-menu__name-child">
+                      8/B - SRI On
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </nav>
         <label for="e-topnav__mobilemenu" class="e-hamburger">

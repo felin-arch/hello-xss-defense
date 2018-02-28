@@ -32,3 +32,5 @@ COPY etc/apache/001-default-waf.conf /etc/apache2/sites-available/
 
 RUN ln -s /etc/apache2/sites-available/001-default-waf.conf /etc/apache2/sites-enabled/001-default-waf.conf
 RUN echo 'Listen 81' >> /etc/apache2/ports.conf
+
+RUN a2enmod headers
