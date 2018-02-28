@@ -1,7 +1,7 @@
 <?php require('header.php'); ?>
 <div class="e-header">
   <h1>
-    Hello XSS Defense in Depth - Hacktivity 2017
+    XSS Defense in Depth
   </h1>
 </div>
 <div class="start_text">
@@ -221,6 +221,26 @@
         </li>
         <li>
           <a href="http://blog.trendmicro.com/trendlabs-security-intelligence/same-origin-policy-bypass-vulnerability-has-wider-reach-than-thought/" target="_blank">Same-origin policy bypass vulnerability</a>
+        </li>
+      </ul>
+    </p>
+    <hr/>
+  </div>
+  <div>
+    <h2 class="start_header">
+      8 - Subresource Integrity
+    </h2>
+    <p>
+      Objective
+      <ul>
+        <li>Get to know SRI!</li>
+      </ul>
+    </p>
+    <p>
+      Reading
+      <ul>
+        <li>
+          <a href="https://scotthelme.co.uk/subresource-integrity/" target="_blank">Subresource Integrity: Securing CDN loaded assets</a>
         </li>
       </ul>
     </p>
