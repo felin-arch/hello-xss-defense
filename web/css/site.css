@@ -39,3 +39,7 @@
 hr {
   margin-top: 60px;
 }
+
+.warning {
+  color: red;
+}
