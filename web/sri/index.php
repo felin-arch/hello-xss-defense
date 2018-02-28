@@ -15,8 +15,8 @@ require('../header.php');
 <p class="large-font">
 </p>
 
-<script src="http://127.0.0.1:8080/js/security-lib.js" crossorigin="anonymous"<?php echo sriTag(); ?>></script>
-<script src="http://127.0.0.1:8080/js/security-lib-tampered.js" crossorigin="anonymous"<?php echo sriTag(); ?>></script>
+<script src="http://xss.lappfold.com:8080/js/security-lib.js" crossorigin="anonymous"<?php echo sriTag(); ?>></script>
+<script src="http://xss.lappfold.com:8080/js/security-lib-tampered.js" crossorigin="anonymous"<?php echo sriTag(); ?>></script>
 
 <?php
 require('../footer.php');
